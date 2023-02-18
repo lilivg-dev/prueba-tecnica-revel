@@ -4,6 +4,7 @@ module.exports = {
     'plugin:react/jsx-runtime',
     'plugin:prettier/recommended',
     'plugin:react-hooks/recommended',
+    'plugin:storybook/recommended',
   ],
   parserOptions: {
     ecmaVersion: 2021,
@@ -112,7 +113,6 @@ module.exports = {
       parserOptions: {
         sourceType: 'module',
         ecmaVersion: 2020,
-        ecmaFeatures: { jsx: true },
       },
     },
   ],

@@ -12,10 +12,12 @@
   "scripts": {
     "start": "next dev",
     "build": "next build && next export",
-    "lint": "eslint .*.js src --max-warnings=0",
+    "lint": "eslint .*.js *.js .storybook/*.js src --max-warnings=0",
     "lint:fix": "yarn lint --fix",
     "postinstall": "yarn install-git-hooks",
-    "install-git-hooks": "./scripts/git-hooks/install.sh"
+    "install-git-hooks": "./scripts/git-hooks/install.sh",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "$": "link:./src",
@@ -25,6 +27,18 @@
     "styled-components": "^5.3.6"
   },
   "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@mdx-js/react": "^1.6.22",
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-docs": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-interactions": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/builder-webpack5": "^6.5.16",
+    "@storybook/manager-webpack5": "^6.5.16",
+    "@storybook/react": "^6.5.16",
+    "@storybook/testing-library": "^0.0.13",
+    "@types/babel__core": "^7",
     "@types/eslint": "^8",
     "@types/node": "18.14.0",
     "@types/prettier": "^2",
@@ -32,6 +46,7 @@
     "@types/styled-components": "^5",
     "@typescript-eslint/eslint-plugin": "^5.52.0",
     "@typescript-eslint/parser": "^5.52.0",
+    "babel-loader": "^8.3.0",
     "babel-plugin-styled-components": "^2.0.7",
     "eslint": "^8.34.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
@@ -40,6 +55,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-storybook": "^0.6.10",
     "lint-staged": "^13.1.2",
     "prettier": "^2.8.4",
     "typescript": "^4.9.5"
