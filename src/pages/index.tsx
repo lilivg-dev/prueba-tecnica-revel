@@ -1,5 +1,7 @@
+import HomeView from '$/containers/Views/Home';
+
 function HomePage(): JSX.Element {
-  return <div>Welcome to Next.js!</div>;
+  return <HomeView />;
 }
 
 export default HomePage;
