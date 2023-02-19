@@ -6,6 +6,19 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  backgrounds: {
+    default: 'dark',
+    values: [
+      {
+        name: 'dark',
+        value: '#222222',
+      },
+      {
+        name: 'light',
+        value: '#ffffff',
+      },
+    ],
+  },
 };
 
 import { addDecorator } from '@storybook/react';
