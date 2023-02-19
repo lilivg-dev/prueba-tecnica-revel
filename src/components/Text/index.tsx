@@ -4,7 +4,7 @@ import { Container } from './styles';
 import { Props } from './types';
 
 export const Text = forwardRef<HTMLElement, Props>(function TextComponent(
-  { tag, weight, variant, color, children, className, ...props },
+  { tag, weight, variant, color = 'white', children, className, ...props },
   ref,
 ) {
   return (

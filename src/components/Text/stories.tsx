@@ -16,7 +16,7 @@ export default {
       control: { type: 'select' },
     },
     color: {
-      options: ['primary', 'darkGrey'],
+      options: ['primary', 'white'],
       control: { type: 'select' },
     },
     variant: {
@@ -36,9 +36,7 @@ export default {
   },
 } as Meta;
 
-const Template: Story<Props> = (args) => (
-  <Text {...args}>Jived fox nymph grabs quick waltz.</Text>
-);
+const Template: Story<Props> = (args) => <Text {...args}>The last of us</Text>;
 
 export const Default = Template.bind({});
 Default.args = {};
