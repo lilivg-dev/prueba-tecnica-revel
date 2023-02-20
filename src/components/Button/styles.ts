@@ -5,10 +5,6 @@ import styled, { css } from 'styled-components';
 
 import { StyledProps } from './types';
 
-export const Container = styled.div<{ $isFullWidth: boolean }>`
-  width: ${({ $isFullWidth }) => ($isFullWidth ? '100%' : 'fit-content')};
-`;
-
 export const RouterLink = styled(DefaultRouterLink)`
   display: contents;
 `;
@@ -68,4 +64,12 @@ export const Component = styled(Text)<StyledProps>`
         `;
     }
   }}
+`;
+
+export const Container = styled.div<{ $isFullWidth: boolean }>`
+  width: ${({ $isFullWidth }) => ($isFullWidth ? '100%' : 'fit-content')};
+
+  ${Component} {
+    width: ${({ $isFullWidth }) => ($isFullWidth ? '100%' : 'fit-content')};
+  }
 `;
