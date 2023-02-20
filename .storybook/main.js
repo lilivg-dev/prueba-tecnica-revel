@@ -13,6 +13,7 @@ module.exports = {
     builder: 'webpack5',
   },
   stories: ['../src/**/stories.@(ts|tsx)'],
+  staticDirs: ['../public'],
   addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
   webpackFinal: (config) => {
     removeSvgLoader(config);

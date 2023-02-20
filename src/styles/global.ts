@@ -3,6 +3,24 @@ import { normalize } from 'styled-normalize';
 
 const GlobalStyle = createGlobalStyle`
   ${normalize};
+  @font-face {
+    font-family: "Roboto";
+    src: url("/fonts/Roboto-Regular.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "Roboto";
+    font-weight: 700;
+    src: url("/fonts/Roboto-Bold.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "RobotoCondensed";
+    src: url("/fonts/RobotoCondensed-Regular.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "RobotoCondensed";
+    font-weight: 700;
+    src: url("/fonts/RobotoCondensed-Bold.ttf") format("truetype");
+  }
   * {
     box-sizing: border-box;
   }

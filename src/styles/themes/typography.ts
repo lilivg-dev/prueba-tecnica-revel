@@ -2,14 +2,14 @@ import { css } from 'styled-components';
 
 export const typography = {
   largeTitle: css`
-    font-family: 'Roboto Condensed';
+    font-family: 'RobotoCondensed';
     font-weight: ${({ theme }) => theme.weights.bold};
     font-size: 8rem;
     text-transform: uppercase;
     line-height: 1.02;
   `,
   title1: css`
-    font-family: 'Roboto Condensed';
+    font-family: 'RobotoCondensed';
     font-weight: ${({ theme }) => theme.weights.bold};
     font-size: 4.875rem;
     line-height: 1.16;
