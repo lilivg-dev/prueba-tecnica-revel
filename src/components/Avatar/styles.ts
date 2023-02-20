@@ -12,11 +12,6 @@ export const AvatarContainer = styled.div`
   background-color: ${({ theme }) => addAlpha(theme.colors.white, 0.5)};
   border-radius: 50%;
   outline: 0;
-
-  :focus {
-    box-shadow: 0 1px 2px ${({ theme }) => addAlpha(theme.colors.primary, 0.05)},
-      0 0 0 4px ${({ theme }) => theme.colors.primary};
-  }
 `;
 
 export const Container = styled.div<StyledProps>`
