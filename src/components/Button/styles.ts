@@ -18,6 +18,8 @@ export const Component = styled(Text)<StyledProps>`
   white-space: nowrap;
   text-decoration: none;
   padding: ${({ $size }) => ($size === 'regular' ? '1rem 7.625rem' : '1rem')};
+  width: ${({ $isFullWidth }) => ($isFullWidth ? '100%' : 'fit-content')};
+  min-width: ${({ $size }) => ($size === 'small' ? '7.8125rem' : 'auto')};
   border-radius: 1rem;
   outline: none;
   outline-offset: 0;
@@ -64,12 +66,4 @@ export const Component = styled(Text)<StyledProps>`
         `;
     }
   }}
-`;
-
-export const Container = styled.div<{ $isFullWidth: boolean }>`
-  width: ${({ $isFullWidth }) => ($isFullWidth ? '100%' : 'fit-content')};
-
-  ${Component} {
-    width: ${({ $isFullWidth }) => ($isFullWidth ? '100%' : 'fit-content')};
-  }
 `;

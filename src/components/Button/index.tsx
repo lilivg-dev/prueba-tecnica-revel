@@ -1,6 +1,6 @@
 import { isLinkProps } from '$/utils/isLinkProps';
 
-import { Component, Container, RouterLink } from './styles';
+import { Component, RouterLink } from './styles';
 import { Props, StyledProps } from './types';
 
 export function Button(props: Props) {
@@ -8,6 +8,7 @@ export function Button(props: Props) {
   const styledProps: StyledProps = {
     $size: props.size ?? 'regular',
     $variant: props.variant ?? 'primary',
+    $isFullWidth: props.isFullWidth ?? false,
   };
 
   const component = (
@@ -20,17 +21,14 @@ export function Button(props: Props) {
         disabled: props.disabled,
         type: props.type ?? 'button',
       })}
+      className={props.className}
+      $isFullWidth={props.isFullWidth ?? false}
     >
       {props.label}
     </Component>
   );
 
   return (
-    <Container
-      className={props.className}
-      $isFullWidth={props.isFullWidth ?? false}
-    >
-      {href ? <RouterLink href={href}>{component}</RouterLink> : component}
-    </Container>
+    <>{href ? <RouterLink href={href}>{component}</RouterLink> : component}</>
   );
 }
