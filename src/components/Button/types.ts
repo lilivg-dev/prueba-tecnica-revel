@@ -31,4 +31,5 @@ export type Props = XOR<ButtonProps, AnchorProps>;
 export type StyledProps = {
   $variant: CommonProps['variant'];
   $size: CommonProps['size'];
+  $isFullWidth: CommonProps['isFullWidth'];
 };
