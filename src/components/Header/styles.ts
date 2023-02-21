@@ -2,7 +2,7 @@ import { resetButtonStyle } from '$/styles/mixins';
 import { addAlpha } from '$/utils/addAlpha';
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.header`
   display: flex;
   align-items: center;
   justify-content: flex-end;
