@@ -45,6 +45,12 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 
+  ol, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
   #__next {
     display: flex;
     min-height: 100vh;
