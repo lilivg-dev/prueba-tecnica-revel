@@ -31,9 +31,14 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    overflow-y: overlay;
     font-family: "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    background-color: #222222;
   }
 
   p, h1, h2, h3, h4, h5, h6, ul {
