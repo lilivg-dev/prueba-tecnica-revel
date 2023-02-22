@@ -25,4 +25,4 @@ export const from: { [key in BreakpointSizes]: string } = keysOf(sizes).reduce(
 );
 
 export const useMediaQuery = (query: string): boolean =>
-  useMediaQueryMUI(query, { noSsr: true });
+  useMediaQueryMUI(query, { noSsr: false });
