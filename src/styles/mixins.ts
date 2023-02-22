@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
 
-const APP_CONTAINER_WIDTH = 80; // In rem
+import { from } from './media';
 
 export const resetButtonStyle = css`
   display: flex;
@@ -19,7 +19,45 @@ export const visuallyHidden = css`
   clip-path: inset(100%);
 `;
 
-export const maxContent = css`
+export const wrap = css`
   width: 100%;
-  max-width: ${APP_CONTAINER_WIDTH}rem;
+  padding-inline: 1rem;
+
+  ${from.tabletPortrait} {
+    padding-inline: 2rem;
+  }
+
+  ${from.laptop} {
+    padding-inline: 7.5rem;
+  }
+
+  ${from.desktop} {
+    padding-inline: 8.125rem;
+  }
+`;
+
+export const moviesWrap = css`
+  width: 100%;
+  padding-inline-end: 1rem;
+
+  ${from.tabletPortrait} {
+    padding-inline-end: 2rem;
+  }
+
+  ${from.laptop} {
+    padding-inline-end: 7.5rem;
+  }
+
+  ${from.desktop} {
+    padding-inline-end: 8.125rem;
+  }
+`;
+
+export const hideScrollbar = css`
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
 `;

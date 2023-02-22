@@ -1,4 +1,3 @@
-import { maxContent } from '$/styles/mixins';
 import styled from 'styled-components';
 
 export const Layout = styled.div`
@@ -6,9 +5,7 @@ export const Layout = styled.div`
   flex-direction: column;
   height: 100%;
   background-color: ${({ theme }) => theme.colors.darkGrey};
+  max-width: 100%;
 `;
 
-export const Main = styled.div`
-  ${maxContent}
-  margin-inline: auto;
-`;
+export const Main = styled.div``;
