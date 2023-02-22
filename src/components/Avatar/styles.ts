@@ -3,7 +3,8 @@ import styled, { css } from 'styled-components';
 
 import { StyledProps } from './types';
 
-export const AvatarContainer = styled.div`
+export const Container = styled.div<StyledProps>`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,23 +13,17 @@ export const AvatarContainer = styled.div`
   background-color: ${({ theme }) => addAlpha(theme.colors.white, 0.5)};
   border-radius: 50%;
   outline: 0;
-`;
 
-export const Container = styled.div<StyledProps>`
-  position: relative;
+  ${({ $hasImage }) => css`
+    width: 2.875rem;
+    height: 2.875rem;
+    padding: ${!$hasImage ? '0.5rem' : null};
+  `}
 
   svg {
     width: 100%;
     height: 100%;
   }
-
-  ${({ $hasImage }) => css`
-    ${AvatarContainer} {
-      width: 2.875rem;
-      height: 2.875rem;
-      padding: ${!$hasImage ? '0.5rem' : null};
-    }
-  `}
 `;
 
 export const Image = styled.img`
