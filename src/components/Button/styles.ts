@@ -1,5 +1,6 @@
 import { Text } from '$/components/Text';
 import { resetButtonStyle } from '$/styles/mixins';
+import { addAlpha } from '$/utils/addAlpha';
 import DefaultRouterLink from 'next/link';
 import styled, { css } from 'styled-components';
 
@@ -41,6 +42,11 @@ export const Component = styled(Text)<StyledProps>`
             color: ${theme.colors.white};
             background-color: ${theme.colors.primary};
           }
+
+          :focus {
+            box-shadow: 0 1px 2px ${addAlpha(theme.colors.primary, 0.05)},
+              0 0 0 4px ${theme.colors.primary};
+          }
         `;
       case 'link':
         return css`
@@ -52,6 +58,12 @@ export const Component = styled(Text)<StyledProps>`
           :hover {
             color: ${theme.colors.primary};
           }
+
+          :focus {
+            box-shadow: 0 1px 2px ${addAlpha(theme.colors.primary, 0.05)},
+              0 0 0 4px ${theme.colors.primary};
+            border-radius: 0.25rem;
+          }
         `;
       default:
       case 'primary':
@@ -62,6 +74,11 @@ export const Component = styled(Text)<StyledProps>`
           :hover {
             color: ${theme.colors.black};
             background-color: ${theme.colors.white};
+          }
+
+          :focus {
+            box-shadow: 0 1px 2px ${addAlpha(theme.colors.white, 0.05)},
+              0 0 0 4px ${theme.colors.white};
           }
         `;
     }
