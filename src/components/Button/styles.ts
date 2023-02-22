@@ -24,8 +24,7 @@ export const Component = styled(Text)<StyledProps>`
   border-radius: 1rem;
   outline: none;
   outline-offset: 0;
-  transition: color 0.3s ease, background-color 0.3s ease,
-    border-color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease;
 
   &:disabled {
     opacity: 0.4;
