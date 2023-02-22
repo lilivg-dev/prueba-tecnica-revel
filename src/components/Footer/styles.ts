@@ -1,6 +1,6 @@
 import { Button } from '$/components/Button';
 import { from } from '$/styles/media';
-import { maxContent } from '$/styles/mixins';
+import { wrap } from '$/styles/mixins';
 import styled from 'styled-components';
 
 export const Container = styled.footer`
@@ -8,7 +8,7 @@ export const Container = styled.footer`
 `;
 
 export const Wrapper = styled.div`
-  ${maxContent}
+  ${wrap}
   padding: 2.5rem 2rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
