@@ -6,6 +6,7 @@ import {
   MovieContainer,
   MovieCover,
   MoviesSlider,
+  Overlay,
   Title,
 } from './styles';
 import { Props } from './types';
@@ -27,6 +28,7 @@ export function MoviesSection({ title, movies, isComingSoon }: Props) {
         {movies.map((movie) => (
           <RouterLink key={movie.id} href={movie.link} title={movie.title}>
             <MovieContainer $isComingSoon={isComingSoon}>
+              <Overlay />
               <MovieCover src={movie.image} />
             </MovieContainer>
           </RouterLink>
