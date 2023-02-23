@@ -1,13 +1,6 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { nanoid } from 'nanoid';
 
-export const ACTIONS = [
-  { label: 'All', onClick: () => {}, checked: true },
-  { label: 'Comedy', onClick: () => {} },
-  { label: 'Drama', onClick: () => {} },
-  { label: 'Thrillers', onClick: () => {} },
-];
-
 const movie = {
   title: 'Movie title',
   image: 'https://api.lorem.space/image/movie?w=261&h=386',
