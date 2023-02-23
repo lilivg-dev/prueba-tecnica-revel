@@ -7,7 +7,6 @@ export const Container = styled.div`
   justify-content: flex-end;
   width: 100%;
   height: 100vh;
-  padding: 2rem;
 `;
 
 export const Form = styled.form`

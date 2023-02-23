@@ -1,9 +1,10 @@
 import LoginBg from '$/assets/images/login-bg.png';
 import LoginBg2x from '$/assets/images/login-bg@2x.png';
-import { maxContent } from '$/styles/mixins';
+import { wrap } from '$/styles/mixins';
 import styled from 'styled-components';
 
 export const Layout = styled.div`
+  ${wrap}
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -14,7 +15,4 @@ export const Layout = styled.div`
   background-position: center;
 `;
 
-export const Main = styled.div`
-  ${maxContent}
-  margin-inline: auto;
-`;
+export const Main = styled.div``;
