@@ -55,6 +55,8 @@ export const MovieContainer = styled.div<StyledProps>`
 
 export const Overlay = styled.div`
   position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   width: 100%;
   height: 100%;
   background-color: ${({ theme }) => addAlpha(theme.colors.black, 0.29)};

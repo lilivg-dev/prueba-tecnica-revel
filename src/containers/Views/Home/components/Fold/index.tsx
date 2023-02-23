@@ -2,7 +2,8 @@ import { Button } from '$/components/Button';
 import { Text } from '$/components/Text';
 import { from, useMediaQuery } from '$/styles/media';
 
-import { Container, Wrapper } from './styles';
+import { movie } from './mock';
+import { Container, Content, CoverImage, Overlay } from './styles';
 
 export function Fold() {
   const isMobile = !useMediaQuery(from.mobile);
@@ -10,21 +11,21 @@ export function Fold() {
 
   return (
     <Container>
-      <Wrapper>
+      <Content>
         <Text
           tag="h1"
           variant={isMobile ? 'title4' : isTablet ? 'title3' : 'largeTitle'}
           color="white"
         >
-          The Last of Us
+          {movie.title}
         </Text>
         <Text tag="p" variant={isMobile ? 'body2' : 'bodyBig'} color="white">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-          viverra lacus quam, in molestie dolor consectetur in. Praesent
-          ullamcorper fringilla pharetra....
+          {movie.description}
         </Text>
         <Button label="Discover" />
-      </Wrapper>
+      </Content>
+      <Overlay />
+      <CoverImage src={movie.image} />
     </Container>
   );
 }
