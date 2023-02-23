@@ -17,7 +17,7 @@ export const MenuButton = styled.button`
   border-radius: 50%;
   position: relative;
 
-  :focus,
+  :focus-visible,
   :hover {
     box-shadow: 0 1px 2px ${({ theme }) => addAlpha(theme.colors.primary, 0.05)},
       0 0 0 4px ${({ theme }) => theme.colors.primary};

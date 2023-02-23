@@ -42,7 +42,7 @@ export const Component = styled(Text)<StyledProps>`
             background-color: ${theme.colors.primary};
           }
 
-          :focus {
+          :focus-visible {
             box-shadow: 0 1px 2px ${addAlpha(theme.colors.primary, 0.05)},
               0 0 0 4px ${theme.colors.primary};
           }
@@ -58,7 +58,7 @@ export const Component = styled(Text)<StyledProps>`
             color: ${theme.colors.primary};
           }
 
-          :focus {
+          :focus-visible {
             box-shadow: 0 1px 2px ${addAlpha(theme.colors.primary, 0.05)},
               0 0 0 4px ${theme.colors.primary};
             border-radius: 0.25rem;
@@ -75,7 +75,7 @@ export const Component = styled(Text)<StyledProps>`
             background-color: ${theme.colors.white};
           }
 
-          :focus {
+          :focus-visible {
             box-shadow: 0 1px 2px ${addAlpha(theme.colors.white, 0.05)},
               0 0 0 4px ${theme.colors.white};
           }

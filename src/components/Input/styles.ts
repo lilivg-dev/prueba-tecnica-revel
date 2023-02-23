@@ -46,7 +46,7 @@ export const StyledInput = styled.input<StyledProps>`
     color: ${({ theme }) => theme.colors.white};
   }
 
-  :focus-visible {
+  :focus-visible-visible {
     border-color: ${({ $hasError, theme }) =>
       $hasError
         ? css`
@@ -88,14 +88,14 @@ export const PasswordToggler = styled.button`
   transition: color 0.3s ease, background-color 0.3s ease, outline 0.3s ease;
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     color: ${({ theme }) => theme.colors.primary};
   }
   &:active,
-  &:focus-visible {
+  &:focus-visible-visible {
     color: ${({ theme }) => theme.colors.primary};
   }
-  &:focus-visible {
+  &:focus-visible-visible {
     outline: 0.125rem solid ${({ theme }) => theme.colors.primary};
   }
 `;
