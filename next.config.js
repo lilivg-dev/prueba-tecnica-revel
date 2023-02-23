@@ -14,4 +14,7 @@ module.exports = withImages({
   eslint: {
     ignoreDuringBuilds: true,
   },
+  compiler: {
+    styledComponents: true,
+  },
 });
