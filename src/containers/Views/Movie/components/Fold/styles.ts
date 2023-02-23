@@ -1,3 +1,4 @@
+import { Button as DefaultButton } from '$/components/Button';
 import { from } from '$/styles/media';
 import { wrap } from '$/styles/mixins';
 import { addAlpha } from '$/utils/addAlpha';
@@ -35,6 +36,14 @@ export const CoverImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+`;
+
+export const BackButton = styled(DefaultButton)`
+  position: absolute;
+  z-index: 200;
+  inset-block-start: 4.25rem;
+  inset-inline-start: 2rem;
+  padding-inline: 1rem;
 `;
 
 export const Wrapper = styled.div`
