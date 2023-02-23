@@ -34,10 +34,14 @@ export const useRouterState = (name: string, defaultValue?: string) => {
         }
 
         setValue(newValue);
-        await router.replace({
-          pathname: router.pathname,
-          query: routerQuery.current,
-        });
+        await router.replace(
+          {
+            pathname: router.pathname,
+            query: routerQuery.current,
+          },
+          undefined,
+          { scroll: false },
+        );
       }
     },
     [name, router],
