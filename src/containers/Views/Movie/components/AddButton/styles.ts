@@ -25,7 +25,7 @@ export const Container = styled.button`
     }
   }
 
-  :focus {
+  :focus-visible {
     box-shadow: 0 1px 2px ${({ theme }) => addAlpha(theme.colors.white, 0.05)},
       0 0 0 4px ${({ theme }) => theme.colors.white};
   }
