@@ -4,13 +4,13 @@ import { nanoid } from 'nanoid';
 const movie = {
   title: 'Movie title',
   image: 'https://api.lorem.space/image/movie?w=261&h=386',
-  link: '/',
+  link: '/movies/title',
 };
 
 const comingSoonMovie = {
   title: 'Movie title',
   image: 'https://api.lorem.space/image/movie?w=400',
-  link: '/',
+  link: '/movies/title',
 };
 
 export const GENRE_MOVIES = new Array(8)
