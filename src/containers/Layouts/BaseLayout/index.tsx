@@ -1,3 +1,4 @@
+import User from '$/assets/images/user.png';
 import { Footer } from '$/components/Footer';
 import { Header } from '$/components/Header';
 import { HeadWrapper } from '$/containers/Layouts/HeadWrapper';
@@ -9,7 +10,7 @@ export function BaseLayout({ children, className, pageMetadata }: Props) {
   return (
     <HeadWrapper head={pageMetadata}>
       <Layout className={className}>
-        <Header onSignOut={() => alert('Sign out')} />
+        <Header onSignOut={() => alert('Sign out')} url={User} />
         <Main>{children}</Main>
         <Footer />
       </Layout>
