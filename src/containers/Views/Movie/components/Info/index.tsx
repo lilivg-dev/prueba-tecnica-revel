@@ -13,9 +13,7 @@ export function Info({ rating, cast, genre }: Props) {
       <Row>
         <Title>Cast:</Title>
         <CastWrap>
-          {cast.map((actor) => (
-            <Text key={actor}>{actor}</Text>
-          ))}
+          <Text>{cast}</Text>
         </CastWrap>
       </Row>
       <Row>

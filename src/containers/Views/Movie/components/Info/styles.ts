@@ -16,11 +16,6 @@ export const Row = styled.div`
 
 export const CastWrap = styled.div`
   display: flex;
-  gap: 0.25rem;
-
-  > span:not(:last-child):after {
-    content: ',';
-  }
 `;
 
 export const Title = styled(DefaultText).attrs({

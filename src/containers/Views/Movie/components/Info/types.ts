@@ -1,5 +1,5 @@
 export type Props = {
   rating: number;
-  cast: string[];
+  cast: string;
   genre: string;
 };
