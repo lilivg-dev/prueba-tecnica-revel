@@ -7,7 +7,6 @@ export const fetchApi = async (url: string) => {
     },
   });
 
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const data = await response.json();
   // eslint-disable-next-line @typescript-eslint/no-unsafe-return
   return data;

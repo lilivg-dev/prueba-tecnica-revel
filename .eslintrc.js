@@ -35,6 +35,10 @@ module.exports = {
       rules: {
         // Disabled because Typescript takes care of that already.
         '@typescript-eslint/no-unused-vars': 'off',
+        // enforce template literal expressions to be of string type.
+        '@typescript-eslint/restrict-template-expressions': 'off',
+        //disallow assigning a value with type any to variables and properties.
+        '@typescript-eslint/no-unsafe-assignment': 'off',
         // This rule is enabled by eslint-config-airbnb and disabled by
         // eslint-plugin-prettier:
         // https://github.com/prettier/eslint-plugin-prettier/issues/65
@@ -75,8 +79,6 @@ module.exports = {
         // components don't accept spread props should therefore be done at the
         // pull request review layer.
         'react/jsx-props-no-spreading': 'off',
-        // enforce template literal expressions to be of string type.
-        '@typescript-eslint/restrict-template-expressions': 'off',
       },
       overrides: [
         // Always prefer default exports, except in files where typically we'd
