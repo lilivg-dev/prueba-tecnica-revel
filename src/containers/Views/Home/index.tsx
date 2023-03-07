@@ -38,7 +38,9 @@ function HomeView(): JSX.Element {
           movies={comingSoonMovies}
           isComingSoon
         />
-        <MoviesSection title="my list" movies={myMovieList} />
+        {myMovieList.length > 0 && (
+          <MoviesSection title="my list" movies={myMovieList} />
+        )}
       </Content>
     </Container>
   );
