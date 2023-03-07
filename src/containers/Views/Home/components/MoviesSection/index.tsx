@@ -1,6 +1,7 @@
 import { from, useMediaQuery } from '$/styles/media';
 import RouterLink from 'next/link';
 
+import { useLogic } from './logic';
 import {
   Container,
   MovieContainer,
@@ -15,6 +16,8 @@ export function MoviesSection({ title, movies, isComingSoon }: Props) {
   const isMobile = !useMediaQuery(from.mobile);
   const isTablet = !useMediaQuery(from.tabletLandscape);
 
+  const { getMovieRouterLink } = useLogic();
+
   return (
     <Container>
       <Title
@@ -26,10 +29,14 @@ export function MoviesSection({ title, movies, isComingSoon }: Props) {
       </Title>
       <MoviesSlider>
         {movies.map((movie) => (
-          <RouterLink key={movie.id} href={movie.link} title={movie.title}>
+          <RouterLink
+            key={movie.id}
+            href={getMovieRouterLink(movie.id)}
+            title={movie.title}
+          >
             <MovieContainer $isComingSoon={isComingSoon}>
               <Overlay />
-              <MovieCover src={movie.image} />
+              <MovieCover src={movie.thumbnail} />
             </MovieContainer>
           </RouterLink>
         ))}

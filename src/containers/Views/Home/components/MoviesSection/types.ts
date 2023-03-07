@@ -1,13 +1,8 @@
-type Movies = {
-  id: string;
-  title: string;
-  image: string;
-  link: string;
-};
+import { Movie } from '$/containers/Views/Home/types';
 
 export type Props = {
   title: string;
-  movies: Movies[];
+  movies: Movie[];
   isComingSoon?: boolean;
   className?: string;
 };
