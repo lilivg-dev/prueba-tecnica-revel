@@ -75,6 +75,8 @@ module.exports = {
         // components don't accept spread props should therefore be done at the
         // pull request review layer.
         'react/jsx-props-no-spreading': 'off',
+        // enforce template literal expressions to be of string type.
+        '@typescript-eslint/restrict-template-expressions': 'off',
       },
       overrides: [
         // Always prefer default exports, except in files where typically we'd
