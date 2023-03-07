@@ -7,10 +7,12 @@ import { Genre, Movie } from './types';
 export function useConnect() {
   const [movies, setMovies] = useState<Movie[]>([]);
   const [genres, setGenres] = useState<Genre[]>();
+  const [myList, setMyList] = useState<string[]>([]);
 
   useEffect(() => {
     void fetchApi('/api/movies').then((res: Movie[]) => setMovies(res));
     void fetchApi('/api/genres').then((res: Genre[]) => setGenres(res));
+    void fetchApi('/api/user/list').then((res: string[]) => setMyList(res));
   }, []);
 
   const comedyMovies = movies.filter(
@@ -45,10 +47,13 @@ export function useConnect() {
 
   const comingSoonMovies = movies.filter(isMovieComingSoon);
 
+  const myMovieList = movies.filter((movie) => myList.includes(movie.id));
+
   return {
     comedyMovies,
     dramaMovies,
     thrillerMovies,
     comingSoonMovies,
+    myMovieList,
   };
 }

@@ -4,6 +4,7 @@ export type Movie = {
   availableDate: string;
   title: string;
   thumbnail: string;
+  highlighted: boolean;
 };
 
 export type Genre = {

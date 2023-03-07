@@ -8,8 +8,13 @@ import { Container, Content, FilterButtons } from './styles';
 function HomeView(): JSX.Element {
   const { segmentedButtonsFilters, segmentedButtonsCurrentFilter } = useLogic();
 
-  const { comedyMovies, dramaMovies, thrillerMovies, comingSoonMovies } =
-    useConnect();
+  const {
+    comedyMovies,
+    dramaMovies,
+    thrillerMovies,
+    comingSoonMovies,
+    myMovieList,
+  } = useConnect();
 
   return (
     <Container>
@@ -33,7 +38,7 @@ function HomeView(): JSX.Element {
           movies={comingSoonMovies}
           isComingSoon
         />
-        <MoviesSection title="my list" movies={comedyMovies} />
+        <MoviesSection title="my list" movies={myMovieList} />
       </Content>
     </Container>
   );

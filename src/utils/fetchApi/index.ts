@@ -1,8 +1,10 @@
-export const fetchApi = async (url: string) => {
+export const fetchApi = async (url: string, initializer?: RequestInit) => {
   const token = localStorage.getItem('token') as string;
 
   const response = await fetch(`${url}`, {
+    ...initializer,
     headers: {
+      ...initializer?.headers,
       Authorization: `Bearer ${token}`,
     },
   });

@@ -9,8 +9,9 @@ import { useLogic } from './logic';
 import { ButtonsWrapper, Container, Content, Title } from './styles';
 
 function MovieView(): JSX.Element {
-  const { isMobile, isTablet, handleAddToList } = useLogic();
-  const { movie, genre, isAvailable } = useConnect();
+  const { isMobile, isTablet } = useLogic();
+  const { movie, genre, isAvailable, handleMyList, isLoading, isInMyList } =
+    useConnect();
 
   return (
     <Container>
@@ -24,8 +25,9 @@ function MovieView(): JSX.Element {
         ) : null}
 
         <AddButton
-          onClick={handleAddToList}
-          checked={movie?.highlighted ?? false}
+          onClick={() => void handleMyList()}
+          checked={isInMyList}
+          disabled={isLoading}
         />
         <Info
           cast={movie?.cast ?? ''}
