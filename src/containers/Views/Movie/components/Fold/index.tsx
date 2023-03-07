@@ -4,7 +4,7 @@ import { from, useMediaQuery } from '$/styles/media';
 import { BackButton, Container, CoverImage, Overlay, Wrapper } from './styles';
 import { Props } from './types';
 
-export function Fold({ image, isComingSoon }: Props) {
+export function Fold({ image, isAvailable }: Props) {
   const isTablet = !useMediaQuery(from.tabletLandscape);
 
   return (
@@ -15,7 +15,7 @@ export function Fold({ image, isComingSoon }: Props) {
       {!isTablet ? (
         <Wrapper>
           <Button label="Trailer" variant="secondary" />
-          {isComingSoon ? <Button label="Play" /> : null}
+          {isAvailable ? <Button label="Play" /> : null}
         </Wrapper>
       ) : null}
     </Container>
